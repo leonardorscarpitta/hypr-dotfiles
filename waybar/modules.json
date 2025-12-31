@@ -1,0 +1,53 @@
+{
+    "custom/arch": {
+        "format": "󰣇",
+        "tooltip": true,
+        "tooltip-format": "Made with 𖹭 \n ~shivam"
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}"
+    },
+
+    "hyprland/window":{
+        "format": "   {}"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "max-volume": 150,
+        "scroll-step": 5,
+        "format-muted": "",
+        "format-icons": {
+            "default": [" ", " ", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+
+
+  "network": {
+        "format-wifi": "󰀂 {essid}" ,
+        "tooltip": true,
+        "tooltip-format": "SSID: {essid}\nSignal: {signalStrength}%\nSpeed: {bandwidthDownBits} ↓ / {bandwidthUpBits} ↑",
+        "format-ethernet": "󰀂",
+        "format-disconnected": "⚠",
+        "interval": 2,
+        "on-click": "networkmanager_dmenu"
+    },
+
+ 
+     "clock": {
+        "format": "  {:%I:%M %p     %m/%d/%Y}",
+        // "format": "  {:%I:%M %p     %e %B}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+
+    "custom/power": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "~/.config/waybar/scripts/powermenu.sh"
+    }
+}
