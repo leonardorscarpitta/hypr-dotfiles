@@ -32,7 +32,7 @@
         "tooltip": true,
         "tooltip-format": "SSID: {essid}\nSignal: {signalStrength}%\nSpeed: {bandwidthDownBits} ↓ / {bandwidthUpBits} ↑",
         "format-ethernet": "󰀂",
-        "format-disconnected": "⚠",
+        "format-disconnected": "⚠:",
         "interval": 2,
         "on-click": "networkmanager_dmenu"
     },
@@ -40,7 +40,6 @@
  
      "clock": {
         "format": "  {:%I:%M %p     %m/%d/%Y}",
-        // "format": "  {:%I:%M %p     %e %B}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
 
