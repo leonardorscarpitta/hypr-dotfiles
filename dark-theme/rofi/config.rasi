@@ -48,6 +48,7 @@ inputbar {
 
     padding: 10px 16px;
     spacing: 10px;
+    children: [ prompt, entry ];
 }
 
 prompt {
@@ -57,7 +58,6 @@ prompt {
 entry {
     placeholder: "Search";
     placeholder-color: @fg2;
-    text-color: @fg0;
 }
 
 /* Lista */
@@ -80,17 +80,16 @@ element {
 element selected normal,
 element selected active {
     background-color: @bg2;
-    text-color: @accent;
+    text-color: @fg0;
 }
 
-/* Hover implícito */
-element normal active {
-    text-color: @accent;
-}
-
-/* Urgente */
+/* Estados */
 element normal urgent {
     text-color: @urgent;
+}
+
+element normal active {
+    text-color: @accent;
 }
 
 /* Ícones */
