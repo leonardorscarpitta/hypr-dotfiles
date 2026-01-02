@@ -1,18 +1,17 @@
 * {
-  bg0     : #1a1b26;
-  bg1     : #1f2335;
-  bg2     : #24283b;
-  bg3     : #414868;
-  fg0     : #c0caf5;
-  fg1     : #a9b1d6;
-  fg2     : #737aa2;
-  red     : #f7768e;
-  green   : #9ece6a;
-  yellow  : #e0af68;
-  blue    : #7aa2f7;
-  magenta : #9a7ecc;
-  cyan    : #4abaaf;
+  /* Backgrounds */
+  bg0 : #0b0b0b;   /* fundo principal */
+  bg1 : #111111;   /* input */
+  bg2 : #1a1a1a;   /* seleção */
+  bg3 : #222222;   /* bordas */
 
-  accent: @red;
-  urgent: @yellow;
+  /* Foregrounds */
+  fg0 : #e5e5e5;   /* texto principal */
+  fg1 : #b5b5b5;   /* texto secundário */
+  fg2 : #777777;   /* texto desabilitado */
+
+  /* Accent minimal */
+  accent : #ffffff;
+  urgent : #aaaaaa;
 }
+

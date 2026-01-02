@@ -1,7 +1,7 @@
 configuration {
     modes: "window,run,ssh,drun";
     sorting-method: "normal";
-    show-icons:true;
+    show-icons: true;
     matching: "regex";
     drun-match-fields: "name";
     display-run: "Menu:";
@@ -15,93 +15,91 @@ configuration {
 * {
     font: "SpaceMono Nerd Font 12";
 
-    background-color:   transparent;
-    text-color:         @fg0;
+    background-color: transparent;
+    text-color: @fg0;
 
-    margin:     0px;
-    padding:    0px;
-    spacing:    0px;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
 }
 
 window {
-    location:       center;
-    width:          480;
-    y-offset:       -20;
-    border-radius:  24px;
+    location: center;
+    width: 480;
+    y-offset: -20;
 
+    border-radius: 20px;
     border: 1px;
     border-color: @bg3;
-    background-color:   @bg0;
+
+    background-color: @bg0;
 }
 
 mainbox {
-    padding:    12px;
+    padding: 14px;
 }
 
+/* Input */
 inputbar {
-    background-color:   @bg1;
-    border-color:       @bg3;
-    border-radius:  16px;
-    border:         2px;
+    background-color: @bg1;
+    border-radius: 14px;
+    border: 1px;
+    border-color: @bg3;
 
-    padding:    8px 16px;
-    spacing:    8px;
-    children:   [ prompt, entry ];
+    padding: 10px 16px;
+    spacing: 10px;
+    children: [ prompt, entry ];
 }
 
 prompt {
-    text-color: @blue;
+    text-color: @fg2;
 }
 
 entry {
-    placeholder:        "Search";
-    placeholder-color:  @cyan;
+    placeholder: "Search";
+    placeholder-color: @fg2;
 }
 
-message {
-    margin:             12px 0 0;
-    border-radius:      16px;
-    border-color:       @bg2;
-    background-color:   @bg2;
-}
-
-textbox {
-    padding:    8px 24px;
-    background-color:   @bg2;
-}
-
+/* Lista */
 listview {
-    background-color:   transparent;
-    margin:     12px 0 0;
-    columns:    1;
-    lines:      10;
-
+    background-color: transparent;
+    margin: 12px 0 0;
+    columns: 1;
+    lines: 9;
     fixed-height: false;
 }
 
+/* Elementos */
 element {
-    padding:        8px 16px;
-    spacing:        8px;
-    border-radius:  16px;
+    padding: 10px 16px;
+    spacing: 10px;
+    border-radius: 14px;
 }
 
+/* Seleção */
+element selected normal,
+element selected active {
+    background-color: @bg2;
+    text-color: @fg0;
+}
+
+/* Estados */
 element normal urgent {
-  text-color: @urgent;
+    text-color: @urgent;
 }
 
 element normal active {
     text-color: @accent;
 }
 
-element selected normal, element selected active {
-    background-color:   @bg2;
-}
-
+/* Ícones */
 element-icon {
-    size:           1em;
+    size: 1em;
     vertical-align: 0.5;
 }
 
+/* Texto */
 element-text {
     text-color: inherit;
 }
+
