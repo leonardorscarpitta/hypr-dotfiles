@@ -13,7 +13,8 @@
 
     // Center
     "modules-center": [
-        "hyprland/window"
+        "clock",
+        "hyprlasd/window"
     ],
 
     // Right side
@@ -21,10 +22,8 @@
         // "idle_inhibitor",
 
         "pulseaudio",
+        
         "network",
-
-        "clock",
-
         "custom/power"
     ],
 

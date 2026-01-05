@@ -79,10 +79,10 @@ window#waybar {
 #workspaces button {
     background: transparent;
     font-weight: 700;
-    font-size: 13px;
+    font-size: 20px;
     color: #9a7a7a; /* menos visível */
     border-radius: 999px;
-    padding: 4px 8px;
+    padding: 2px 5px;
 }
 
 /* Workspace ativo */
@@ -99,9 +99,9 @@ window#waybar {
 
 /* Arch logo */
 #custom-arch {
-    margin-left: 6px;
+    /* margin-left: 8px; */
     padding: 0 10px;
-    font-size: 22px;
+    font-size: 20px;
     color: #ff4d5a;
 }
 
@@ -111,7 +111,7 @@ window#waybar {
 
 /* System monitor */
 #custom-sysmon {
-    font-size: 24px;
+    font-size: 20px;
     padding: 0 10px;
     color: #f2eaea;
 }
@@ -123,7 +123,7 @@ window#waybar {
 /* Power button */
 #custom-power {
     padding: 0 12px;
-    font-size: 16px;
+    font-size: 20px;
     color: #b11226;
 }
 

@@ -21,10 +21,9 @@
         // "idle_inhibitor",
 
         "pulseaudio",
-        "network",
-
+        
         "clock",
-
+        "network",
         "custom/power"
     ],
 

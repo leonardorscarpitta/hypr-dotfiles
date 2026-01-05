@@ -8,14 +8,20 @@
     "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
+    // "format": {name},
     "format": "{icon}",
     "format-icons": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "default": ""
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "",
+        "default": ""
     }
 },
 
@@ -28,27 +34,27 @@
         "format": "{icon} {volume}%",
         "max-volume": 150,
         "scroll-step": 5,
-        "format-muted": "",
+        "format-muted": " ",
         "format-icons": {
-            "default": [" ", " ", " "]
+            "default": ["󰕿", "󰖀", "󰕾"]
         },
         "on-click": "pavucontrol"
     },
 
 
   "network": {
-        "format-wifi": "󰀂 {essid}" ,
+        "format-wifi": "󰈀 {essid}" ,
         "tooltip": true,
         "tooltip-format": "SSID: {essid}\nSignal: {signalStrength}%\nSpeed: {bandwidthDownBits} ↓ / {bandwidthUpBits} ↑",
-        "format-ethernet": "󰀂",
-        "format-disconnected": "⚠:",
+        "format-ethernet": "󰀂 Wired",
+        "format-disconnected": "󰞃 No connection:",
         "interval": 2,
         "on-click": "networkmanager_dmenu"
     },
 
  
      "clock": {
-        "format": "  {:%I:%M %p     %m/%d/%Y}",
+        "format": "  {:%I:%M %p    %m/%d/%Y}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
 

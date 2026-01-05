@@ -2,12 +2,20 @@
 *
 
 # Only required dotfiles
-!dark-theme/
-!red-theme/
+!fastfetch/
+!hypr/
+!kitty/
+!nvim/
+!rofi/**
+!waybar/
 
 # Folders inside
-!dark-theme/**
-!red-theme/**
+!fastfetch/**
+!hypr/**
+!kitty/**
+!nvim/**
+!rofi/**
+!waybar/**
 
 !.gitignore
 !README.md
