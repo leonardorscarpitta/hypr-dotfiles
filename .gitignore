@@ -8,6 +8,7 @@
 !nvim/
 !rofi/**
 !waybar/
+!btop/
 
 # Folders inside
 !fastfetch/**
@@ -16,6 +17,7 @@
 !nvim/**
 !rofi/**
 !waybar/**
+!btop/**
 
 !.gitignore
 !README.md

@@ -1,0 +1,77 @@
+# ====================================================
+# BTOP theme adapted for Kitty Minimal Red Theme
+# ====================================================
+
+# Main background (igual ao kitty)
+theme[main_bg]="#120607"
+
+# Main text color
+theme[main_fg]="#f2eaea"
+
+# Title color for boxes
+theme[title]="#ff4d5a"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#ffffff"
+
+# Background color of selected item in processes box
+theme[selected_bg]="#2a0f13"
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#ff6a7a"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#9a7a7a"
+
+# Misc colors for processes box
+theme[proc_misc]="#b89292"
+
+# Box outline colors
+theme[cpu_box]="#b11226"
+theme[mem_box]="#b11226"
+theme[net_box]="#b11226"
+theme[proc_box]="#b11226"
+
+# Divider lines
+theme[div_line]="#3a1a1e"
+
+# ----------------------------------------------------
+# Graphs & Meters (gradientes)
+# ----------------------------------------------------
+
+# Temperature graph
+theme[temp_start]="#b11226"
+theme[temp_mid]="#ff4d5a"
+theme[temp_end]="#ffffff"
+
+# CPU graph
+theme[cpu_start]="#b03045"
+theme[cpu_mid]="#ff6a7a"
+theme[cpu_end]="#ffffff"
+
+# Memory / Disk meters
+theme[free_start]="#7a4a50"
+theme[free_mid]="#b89292"
+theme[free_end]="#ffffff"
+
+theme[cached_start]="#9a6a70"
+theme[cached_mid]="#e0a0a0"
+theme[cached_end]="#ffffff"
+
+theme[available_start]="#b11226"
+theme[available_mid]="#ff4d5a"
+theme[available_end]="#ffffff"
+
+theme[used_start]="#b03045"
+theme[used_mid]="#ff6a7a"
+theme[used_end]="#ffffff"
+
+# Network graphs
+theme[download_start]="#7a4a50"
+theme[download_mid]="#b08a8a"
+theme[download_end]="#ffffff"
+
+theme[upload_start]="#b03045"
+theme[upload_mid]="#ff6a7a"
+theme[upload_end]="#ffffff"
+
