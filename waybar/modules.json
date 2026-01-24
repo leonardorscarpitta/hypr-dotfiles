@@ -46,8 +46,8 @@
         "format-wifi": "󰈀 {essid}" ,
         "tooltip": true,
         "tooltip-format": "SSID: {essid}\nSignal: {signalStrength}%\nSpeed: {bandwidthDownBits} ↓ / {bandwidthUpBits} ↑",
-        "format-ethernet": "󰀂 Wired",
-        "format-disconnected": "󰞃 No connection:",
+        "format-ethernet": "󰀂 Ethernet",
+        "format-disconnected": "󰞃 No connection",
         "interval": 2,
         "on-click": "networkmanager_dmenu"
     },

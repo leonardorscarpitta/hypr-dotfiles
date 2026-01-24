@@ -3,8 +3,10 @@
 /* ================================================= */
 
 * {
-    font-family: "SpaceMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    /* font-family: "SpaceMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif; */
+    font-family: "Ubuntu Mono", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 16px;
+    font-weight: 100;
     transition: background-color 0.2s ease /*color 0.2s eas*/;
 }
 
@@ -20,7 +22,8 @@ window#waybar {
 .modules-left,
 .modules-center,
 .modules-right {
-    background: #120607;
+    background: none;
+    background-color: rgba(0,0,0,0.25);
     margin: 5px 10px;
     padding: 2px 8px;
     border-radius: 999px;
@@ -46,6 +49,7 @@ window#waybar {
 #language,
 #mpd,
 #bluetooth {
+    background-color: rgba(0, 0, 0, 0.35);
     padding: 4px 10px;
     border-radius: 999px;
     background: transparent;
@@ -77,29 +81,28 @@ window#waybar {
 
 /* Workspaces */
 #workspaces button {
+    color: #eee;
     background: transparent;
     font-weight: 700;
-    font-size: 20px;
-    color: #9a7a7a; /* menos visível */
+    font-size: 1px;
     border-radius: 999px;
-    padding: 2px 5px;
+    /* padding: 2px 5px; */
 }
 
 /* Workspace ativo */
 #workspaces button.active {
-    background: #2a0f13;
-    color: #ff4d5a; /* destaque forte */
+    background: #7A3A3E;
+    padding: 0 20px;
+    color: #FFFFFF;
 }
 
 /* Hover workspace */
 #workspaces button:hover {
-    background: #1f0b0e;
-    color: #f2eaea;
+    background: transparent;
 }
 
 /* Arch logo */
 #custom-arch {
-    /* margin-left: 8px; */
     padding: 0 10px;
     font-size: 20px;
     color: #ff4d5a;

@@ -1,20 +1,19 @@
- 
 {
     "layer": "top",
     "position": "top",
     "height": 30,
     "spacing": 0,
+    "transparency": 10,
 
     // Left side
     "modules-left": [
-        "custom/arch",
-        "hyprland/workspaces"
+      "custom/arch",
+      "hyprland/workspaces"
     ],
-
+       
     // Center
     "modules-center": [
-        "clock",
-        "hyprlasd/window"
+      "clock"
     ],
 
     // Right side
