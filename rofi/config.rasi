@@ -5,15 +5,16 @@ configuration {
     matching: "regex";
     drun-match-fields: "name";
     display-run: "Menu:";
-    display-ssh: "SSH:";
-    display-drun: "Apps:";
+    display-ssh: "󰣀 ";
+    display-drun: " ";
     display-window: "Windows:";
 }
 
 @theme "tokyo"
 
 * {
-    font: "SpaceMono Nerd Font 12";
+    // font: "SpaceMono Nerd Font 12";
+    font: "Ubuntu Mono 12";
 
     background-color: transparent;
     text-color: @fg0;

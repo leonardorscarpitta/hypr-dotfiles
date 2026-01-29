@@ -5,7 +5,7 @@
 * {
     font-family: "Ubuntu Mono", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 16px;
-    font-weight: 800;
+    font-weight: 500;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -15,17 +15,13 @@ window#waybar {
     background: rgba(0, 0, 0, 0.6);  /* Fundo semitransparente mais forte para melhorar visibilidade */
     color: #f2eaea;                   /* Cor do texto */
     border: 1px solid rgba(255, 255, 255, 0.15);  /* Borda sutil com opacidade */
-    margin-top: 10px;                 /* Ajustando o espaçamento superior */
-    margin-left: 5px;                 /* Ajustando o espaçamento à esquerda */
-    margin-right: 5px;                /* Ajustando o espaçamento à direita */
-    padding: 3px 10px;                /* Ajustando o padding para diminuir a altura */
 }
 
 /* Containers (deixando mais sóbrios) */
 .modules-left,
 .modules-center,
 .modules-right {
-    margin: 5px 8px;                  /* Ajustando margens para evitar grandes espaçamentos */
+    margin: 5px 10px;
     border-radius: 999px;
 }
 
@@ -49,7 +45,7 @@ window#waybar {
 #language,
 #mpd,
 #bluetooth {
-    padding: 4px 8px;                /* Reduzindo o padding dos módulos */
+    padding: 6px 12px;
     border-radius: 999px;
     color: #f2eaea;
     transition: background-color 0.3s ease;  /* Transição suave de fundo */
@@ -75,7 +71,7 @@ window#waybar {
 #language:hover,
 #mpd:hover,
 #bluetooth:hover {
-    border-radius: 999px;
+    background: #1f0b0e;  /* Cor de fundo suave no hover */
 }
 
 /* Workspaces */
@@ -84,7 +80,6 @@ window#waybar {
     background: transparent;
     font-weight: 700;
     margin: 5px;
-    padding: 3px 6px;                 /* Reduzindo o padding nos botões de workspace */
     border-radius: 999px;
 }
 
@@ -94,10 +89,15 @@ window#waybar {
     color: #FFFFFF;
 }
 
+/* Hover workspace */
+#workspaces button:hover {
+    background: #6b2f33;  /* Cor mais suave para hover nos workspaces */
+}
+
 /* Arch logo */
 #custom-arch {
-    padding: 0 8px;                  /* Ajustando padding para ficar mais compacto */
-    font-size: 28px;                 /* Ajustando o tamanho da fonte */
+    padding: 0 10px;
+    font-size: 32px;
     color: #ff4d5a;
 }
 
@@ -107,8 +107,8 @@ window#waybar {
 
 /* System monitor */
 #custom-sysmon {
-    font-size: 18px;                 /* Ajustando o tamanho da fonte */
-    padding: 0 8px;                  /* Ajustando o padding */
+    font-size: 20px;
+    padding: 0 10px;
     color: #f2eaea;
 }
 
@@ -118,7 +118,7 @@ window#waybar {
 
 /* Power button */
 #custom-power {
-    padding: 0 10px;                 /* Ajustando o padding */
+    padding: 0 12px;
     font-size: 20px;
     color: #b11226;
 }

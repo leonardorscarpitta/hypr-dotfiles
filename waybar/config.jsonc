@@ -2,8 +2,12 @@
     "layer": "top",
     "position": "top",
     "height": 30,
+    "margin-right": 8,
+    "margin-left": 8,
+    "margin-top": 4,
     "spacing": 0,
-    "transparency": 10,
+    "transparency": 30,
+    "shadow": "0 0 10px rgba(0, 0, 0, 0.3)",
 
     // Left side
     "modules-left": [
@@ -18,8 +22,6 @@
 
     // Right side
     "modules-right": [
-        // "idle_inhibitor",
-
         "pulseaudio",
         
         "network",

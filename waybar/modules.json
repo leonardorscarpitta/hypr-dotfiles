@@ -47,7 +47,7 @@
         "tooltip": true,
         "tooltip-format": "SSID: {essid}\nSignal: {signalStrength}%\nSpeed: {bandwidthDownBits} ↓ / {bandwidthUpBits} ↑",
         "format-ethernet": "󰀂 Ethernet",
-        "format-disconnected": "󰞃 No connection",
+        "format-disconnected": "󰞃 No Connection",
         "interval": 2,
         "on-click": "networkmanager_dmenu"
     },
@@ -63,5 +63,5 @@
         "format": "",
         "tooltip": false,
         "on-click": "~/.config/waybar/scripts/powermenu.sh"
-    }
+    },
 }
