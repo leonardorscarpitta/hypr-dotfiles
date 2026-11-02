@@ -1,0 +1,6 @@
+[terminal]
+vt = 1
+
+[default_session]
+command = "tuigreet --time --time-format '%H:%M · %A, %d %B' --remember --asterisks --asterisks-char '◆' --greeting 'archlinux' --window-padding 2 --container-padding 2 --width 60 --theme 'border=yellow;text=white;prompt=lightyellow;time=lightyellow;greet=yellow;action=darkgray;button=yellow;container=black;input=white' --cmd start-hyprland"
+user = "greeter"
