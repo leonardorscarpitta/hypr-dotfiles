@@ -1,0 +1,98 @@
+* {
+    ink:      #141318f2;
+    mantle:   #0f0e12;
+    surface2: #2a2731;
+    overlay:  #46414f;
+    muted:    #8b8496;
+    text:     #e9e2d4;
+    gold:     #d6aa5c;
+    gold2:    #f1d08f;
+
+    background-color: transparent;
+    text-color:       @text;
+}
+
+window {
+    location:         center;
+    width:            760px;
+    background-color: @ink;
+    border:           1px;
+    border-color:     @overlay;
+    border-radius:    12px;
+}
+
+mainbox {
+    spacing:  0;
+    children: [ inputbar, section, listview, footer ];
+}
+
+inputbar {
+    padding:      18px 20px;
+    border:       0 0 1px 0;
+    border-color: @surface2;
+    children:     [ entry ];
+    expand:       false;
+}
+entry {
+    font:              "Inter 13";
+    placeholder:       "Search for anything…";
+    placeholder-color: @muted;
+    cursor:            text;
+}
+
+section {
+    orientation: horizontal;
+    expand:      false;
+    children:    [ prompt ];
+}
+prompt {
+    padding:    12px 20px 4px 20px;
+    font:       "Inter SemiBold 9.5";
+    text-color: @muted;
+    expand:     false;
+}
+
+listview {
+    lines:        8;
+    columns:      1;
+    padding:      4px 8px 8px 8px;
+    spacing:      2px;
+    fixed-height: true;
+    scrollbar:    false;
+    expand:       true;
+}
+
+element {
+    padding:       9px 12px;
+    spacing:       12px;
+    border-radius: 8px;
+    children:      [ element-icon, element-text ];
+}
+element-icon { size: 22px; vertical-align: 0.5; }
+element-text { vertical-align: 0.5; markup: true; }
+
+element normal.normal, element alternate.normal { background-color: transparent; }
+element selected.normal { background-color: @surface2; }
+element selected.normal element-text { text-color: @gold2; }
+element-text, element-icon { background-color: inherit; text-color: inherit; }
+
+footer {
+    orientation:      horizontal;
+    padding:          10px 18px;
+    border:           1px 0 0 0;
+    border-color:     @surface2;
+    background-color: @mantle;
+    border-radius:    0 0 12px 12px;
+    expand:           false;
+    children:         [ textbox-brand, textbox-hint ];
+}
+textbox-brand {
+    str:        "◆  archlinux";
+    text-color: @gold;
+    expand:     true;
+}
+textbox-hint {
+    str:        "Open   ↵";
+    text-color: @muted;
+    expand:     false;
+}

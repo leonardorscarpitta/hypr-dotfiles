@@ -1,0 +1,12 @@
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    display-drun: "Applications";
+    display-run: "Commands";
+    display-window: "Windows";
+    drun-display-format: "{name}[  <span foreground='#8b8496'>{generic}</span>]";
+    font: "Inter 11";
+}
+
+@theme "kintsugi"
