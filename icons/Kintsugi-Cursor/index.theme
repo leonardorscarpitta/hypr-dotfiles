@@ -1,0 +1,4 @@
+[Icon Theme]
+Name=Kintsugi-Cursor
+Comment=Kintsugi cursor: ink body, gold outline (recolored Adwaita, CC-BY-SA-3.0)
+Inherits="hicolor"
