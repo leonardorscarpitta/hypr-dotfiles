@@ -1,0 +1,24 @@
+font=JetBrainsMono Nerd Font 10.5
+background-color=#141318e6
+text-color=#e9e2d4
+border-color=#d6aa5c
+progress-color=over #d6aa5c55
+border-size=2
+border-radius=12
+padding=14
+margin=12
+width=360
+max-icon-size=48
+icons=1
+icon-path=/usr/share/icons/Papirus-Dark
+default-timeout=6000
+anchor=top-right
+layer=overlay
+format=<b>%s</b>\n%b
+
+[urgency=low]
+border-color=#46414f
+
+[urgency=critical]
+border-color=#cf6a52
+default-timeout=0
