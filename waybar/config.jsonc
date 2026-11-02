@@ -1,0 +1,162 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 38,
+    "margin-top": 6,
+    "margin-left": 8,
+    "margin-right": 8,
+    "spacing": 4,
+
+    "modules-left":   ["custom/logo", "hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right":  ["mpris", "tray", "pulseaudio", "group/resources", "network#vpn", "network", "custom/nightlight", "custom/power"],
+
+    "custom/logo": {
+        "format": "󰣇",
+        "tooltip": false,
+        "on-click": "rofi -show drun"
+    },
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "persistent-workspaces": { "*": 3 },
+        "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e+1\" })'",
+        "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e-1\" })'"
+    },
+
+    "hyprland/window": {
+        "format": "{title}",
+        "icon": true,
+        "icon-size": 15,
+        "max-length": 40,
+        "separate-outputs": true
+    },
+
+    "clock": {
+
+        "format": "<span color='#d6aa5c'>󰭦</span> {0:%m/%d}  <span color='#d6aa5c'>•</span>  {0:%I:%M %p}",
+        "format-alt": "<span color='#d6aa5c'>󰭦</span> {0:%A, %m/%d/%Y}  <span color='#d6aa5c'>•</span>  {0:%I:%M %p}",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+            "mode": "month",
+            "format": {
+                "months":   "<span color='#f1d08f'><b>{}</b></span>",
+                "weekdays": "<span color='#8b8496'>{}</span>",
+                "today":    "<span color='#141318' background='#d6aa5c'><b>{}</b></span>"
+            }
+        }
+    },
+
+    "mpris": {
+
+        "format":        "<span color='#d6aa5c'>{player_icon}</span>  {title}  <span color='#8b8496'>{artist}</span>  <span color='#f1d08f'>{status_icon}</span>",
+        "format-paused": "<span color='#8b8496'>{player_icon}</span>  <span color='#8b8496'>{title}</span>  <span color='#46414f'>{artist}</span>  <span color='#8b8496'>{status_icon}</span>",
+        "format-stopped": "",
+        "player-icons": {
+            "default":  "󰎇",
+            "brave":    "󰗃",
+            "chromium": "󰗃",
+            "firefox":  "󰈹",
+            "spotify":  "󰓇",
+            "mpv":      "󱜅"
+        },
+        "status-icons": { "playing": "󰏤", "paused": "󰐊" },
+        "title-len": 15,
+        "ellipsis": "…",
+        "tooltip-format": "{player} · {status}\n{title}\n{artist}\n{album}",
+        "on-click": "playerctl play-pause",
+        "on-click-right": "playerctl next",
+        "on-click-middle": "playerctl previous",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
+    },
+
+    "network": {
+
+        "interface": "enp9s0",
+        "interval": 3,
+        "format-ethernet":     "<span color='#d6aa5c'>󰑩</span>",
+        "format-linked":       "<span color='#8b8496'>󰑩</span>",
+        "format-disconnected": "<span color='#cf6a52'>󰅛</span>",
+        "tooltip-format": "{ifname} · {ipaddr}/{cidr} via {gwaddr}\n󰁅 {bandwidthDownBytes}   󰁝 {bandwidthUpBytes}",
+        "tooltip-format-disconnected": "enp9s0 · cable unplugged or link down",
+        "on-click": "nm-connection-editor"
+    },
+
+    "network#vpn": {
+
+        "interface": "wg0",
+        "interval": 3,
+        "format":              "<span color='#d6aa5c'>󰌆</span>",
+        "format-ethernet":     "<span color='#d6aa5c'>󰌆</span>",
+        "format-linked":       "<span color='#d6aa5c'>󰌆</span>",
+        "format-disconnected": "<span color='#cf6a52'>󰌆</span>",
+        "tooltip-format-disconnected": "WireGuard · wg0 is down",
+        "tooltip-format": "WireGuard · {ifname} · {ipaddr}/{cidr}\n󰁅 {bandwidthDownBytes}   󰁝 {bandwidthUpBytes}"
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 8,
+        "icons": {
+            "discord_status_icon_0": "discord-tray",
+            "discord_status_icon_1": "discord-tray",
+            "TelegramDesktop": "telegram-panel",
+            "gpu-screen-recorder-ui": "record-desktop-indicator"
+        }
+    },
+
+    "pulseaudio": {
+
+        "format": "<span color='#d6aa5c'>{icon}</span>  {volume}%",
+        "format-muted": "<span color='#8b8496'>󰝟</span>  <span color='#8b8496'>muted</span>",
+        "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
+        "tooltip-format": "{desc} · {volume}%",
+        "scroll-step": 5,
+        "on-click": "pavucontrol",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    },
+
+    "custom/nightlight": {
+        "exec": "~/.config/waybar/scripts/nightlight.sh",
+        "return-type": "json",
+        "interval": 30,
+        "signal": 8,
+        "on-click": "~/.config/waybar/scripts/nightlight.sh toggle"
+    },
+
+    "group/resources": {
+        "orientation": "horizontal",
+        "modules": ["cpu", "memory", "custom/gpu"]
+    },
+
+    "cpu": {
+        "format": "<span color='#d6aa5c'>󰓅</span>  {usage}%",
+        "interval": 2,
+        "states": { "warning": 70, "critical": 90 },
+        "tooltip-format": "CPU · {usage}%",
+        "on-click": "kitty -e btop"
+    },
+
+    "memory": {
+        "format": "<span color='#d6aa5c'>󰍛</span>  {percentage}%",
+        "interval": 2,
+        "states": { "warning": 70, "critical": 90 },
+        "tooltip-format": "RAM · {used:0.1f} / {total:0.1f} GiB",
+        "on-click": "kitty -e btop"
+    },
+
+    "custom/gpu": {
+        "format": "<span color='#d6aa5c'>󰢮</span>  {}%",
+        "exec": "~/.config/waybar/scripts/gpu.sh",
+        "return-type": "json",
+        "interval": 2,
+        "on-click": "kitty -e btop"
+    },
+
+    "custom/power": {
+        "format": "⏻",
+        "tooltip-format": "Power menu",
+        "on-click": "~/.config/hypr/scripts/powermenu.sh"
+    }
+}
