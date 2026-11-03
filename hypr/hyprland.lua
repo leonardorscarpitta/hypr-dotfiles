@@ -46,7 +46,7 @@ hl.config({
         gaps_out    = 14,
         border_size = 2,
         col = {
-            active_border   = { colors = { "rgba(" .. c.gold2 .. "ff)", "rgba(" .. c.gold .. "ff)", "rgba(" .. c.clay .. "cc)" }, angle = 135 },
+            active_border   = "rgba(" .. c.gold .. "ff)",
             inactive_border = "rgba(" .. c.overlay .. "88)",
         },
         resize_on_border = true,
@@ -107,7 +107,7 @@ hl.curve("soft",   { type = "spring", mass = 1, stiffness = 210, damping = 23 })
 
 hl.animation({ leaf = "global",      enabled = true, speed = 10, bezier = "default" })
 hl.animation({ leaf = "border",      enabled = true, speed = 6,  bezier = "pour" })
-hl.animation({ leaf = "borderangle", enabled = true, speed = 60, bezier = "linear", style = "loop" })
+hl.animation({ leaf = "borderangle", enabled = false })
 hl.animation({ leaf = "windows",     enabled = true, speed = 5,  spring = "soft" })
 hl.animation({ leaf = "windowsIn",   enabled = true, speed = 4,  spring = "soft",   style = "popin 90%" })
 hl.animation({ leaf = "windowsOut",  enabled = true, speed = 1.6, bezier = "linear", style = "popin 90%" })
