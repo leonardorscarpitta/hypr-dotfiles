@@ -219,6 +219,13 @@ hl.window_rule({
     center = true,
 })
 
+hl.window_rule({
+    name   = "mpv-float",
+    match  = { class = "^(mpv)$" },
+    float  = true,
+    center = true,
+})
+
 hl.window_rule({ name = "kitty-glass", match = { class = "^(kitty)$" }, opacity = "0.92 0.86" })
 
 hl.layer_rule({ name = "blur-waybar", match = { namespace = "^waybar$" },        blur = true, ignore_alpha = 0.2 })
