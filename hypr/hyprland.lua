@@ -152,10 +152,10 @@ for key, dir in pairs(dirs) do
     hl.bind(mod .. " + SHIFT + " .. key,      hl.dsp.window.swap({ direction = dir }))
 end
 
-hl.bind(mod .. " + CTRL + right", hl.dsp.window.resize({ x = 40,  y = 0,   relative = true }), { repeating = true })
-hl.bind(mod .. " + CTRL + left",  hl.dsp.window.resize({ x = -40, y = 0,   relative = true }), { repeating = true })
-hl.bind(mod .. " + CTRL + down",  hl.dsp.window.resize({ x = 0,   y = 40,  relative = true }), { repeating = true })
-hl.bind(mod .. " + CTRL + up",    hl.dsp.window.resize({ x = 0,   y = -40, relative = true }), { repeating = true })
+hl.bind(mod .. " + CTRL + right", hl.dsp.exec_cmd(scripts .. "resize.sh right"), { repeating = true })
+hl.bind(mod .. " + CTRL + left", hl.dsp.exec_cmd(scripts .. "resize.sh left"), { repeating = true })
+hl.bind(mod .. " + CTRL + down", hl.dsp.exec_cmd(scripts .. "resize.sh down"), { repeating = true })
+hl.bind(mod .. " + CTRL + up",   hl.dsp.exec_cmd(scripts .. "resize.sh up"), { repeating = true })
 
 for i = 1, 10 do
     local key = i % 10
@@ -224,6 +224,7 @@ hl.window_rule({
     match  = { class = "^(mpv)$" },
     float  = true,
     center = true,
+    keep_aspect_ratio = true,
 })
 
 hl.window_rule({ name = "kitty-glass", match = { class = "^(kitty)$" }, opacity = "0.92 0.86" })
