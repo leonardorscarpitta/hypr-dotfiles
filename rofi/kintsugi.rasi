@@ -1,12 +1,12 @@
 * {
-    ink:      #141318f2;
-    mantle:   #0f0e12;
-    surface2: #2a2731;
-    overlay:  #46414f;
-    muted:    #8b8496;
-    text:     #e9e2d4;
-    gold:     #d6aa5c;
-    gold2:    #f1d08f;
+    ink:      #131318f2;
+    mantle:   #0e0e13;
+    surface2: #312f4f;
+    overlay:  #46454f;
+    muted:    #86838d;
+    text:     #e5e1e9;
+    gold:     #c4c0ff;
+    gold2:    #e2dfff;
 
     background-color: transparent;
     text-color:       @text;
@@ -34,7 +34,7 @@ inputbar {
     expand:       false;
 }
 entry {
-    font:              "Iosevka Nerd Font 14";
+    font:              "Intel One Mono 13";
     placeholder:       "Search for anything…";
     placeholder-color: @muted;
     cursor:            text;
@@ -47,7 +47,7 @@ section {
 }
 prompt {
     padding:    12px 20px 4px 20px;
-    font:       "Iosevka Nerd Font SemiBold 10.5";
+    font:       "Intel One Mono Medium 9.5";
     text-color: @muted;
     expand:     false;
 }

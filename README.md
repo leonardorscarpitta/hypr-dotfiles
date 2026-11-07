@@ -17,6 +17,14 @@ sudo pacman -S --needed \
   adw-gtk-theme papirus-icon-theme ttf-jetbrains-mono-nerd inter-font qt6ct
 ```
 
+Waybar and rofi use [Intel One Mono](https://github.com/intel/intel-one-mono) (not in `extra`), installed per user:
+
+```sh
+mkdir -p ~/.local/share/fonts/intel-one-mono && cd /tmp
+curl -LO https://github.com/intel/intel-one-mono/releases/download/V1.5.0/intel-one-mono-ttf.zip
+unzip -j intel-one-mono-ttf.zip '*.ttf' -d ~/.local/share/fonts/intel-one-mono && fc-cache -f
+```
+
 Optional: `rocm-smi-lib` (AMD GPU stats in btop), `greetd greetd-tuigreet` (login screen).
 
 ## Install

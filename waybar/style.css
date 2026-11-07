@@ -1,18 +1,18 @@
-@define-color ink      #141318;
-@define-color surface  #1e1c23;
-@define-color surface2 #2a2731;
-@define-color overlay  #46414f;
-@define-color muted    #8b8496;
-@define-color text     #e9e2d4;
-@define-color gold     #d6aa5c;
-@define-color gold2    #f1d08f;
-@define-color clay     #cf6a52;
-@define-color sage     #93b088;
-@define-color teal     #73a7a3;
+@define-color ink      #131318;
+@define-color surface  #1f1e25;
+@define-color surface2 #312f4f;
+@define-color overlay  #46454f;
+@define-color muted    #86838d;
+@define-color text     #e5e1e9;
+@define-color gold     #c4c0ff;
+@define-color gold2    #e2dfff;
+@define-color clay     #ffb4ab;
+@define-color sage     #7aba7d;
+@define-color teal     #49c1d3;
 
 * {
-    font-family: "Iosevka Nerd Font";
-    font-size: 14.5px;
+    font-family: "Intel One Mono", "JetBrainsMono Nerd Font";
+    font-size: 13.5px;
     font-weight: 700;
     min-height: 0;
     border: none;

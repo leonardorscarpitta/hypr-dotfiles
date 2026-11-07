@@ -5,8 +5,8 @@ configuration {
     display-drun: "Applications";
     display-run: "Commands";
     display-window: "Windows";
-    drun-display-format: "{name}[  <span foreground='#8b8496'>{generic}</span>]";
-    font: "Iosevka Nerd Font 12";
+    drun-display-format: "{name}[  <span foreground='#86838d'>{generic}</span>]";
+    font: "Intel One Mono 11";
 }
 
 @theme "kintsugi"
