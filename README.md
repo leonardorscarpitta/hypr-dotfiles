@@ -36,14 +36,14 @@ ln -sf "$PWD/starship.toml" ~/.config/starship.toml
 ln -sf "$PWD/XCompose" ~/.config/XCompose
 
 # cursor theme
-mkdir -p ~/.local/share/icons && ln -sfn "$PWD/icons/macOS" ~/.local/share/icons/macOS
+mkdir -p ~/.local/share/icons && ln -sfn "$PWD/icons/Bibata-Original-Classic" ~/.local/share/icons/Bibata-Original-Classic
 
 # shell prompt and dark mode for GTK apps
 echo 'eval "$(starship init bash)"' >> ~/.bashrc
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark
 gsettings set org.gnome.desktop.interface icon-theme Papirus-Dark
-gsettings set org.gnome.desktop.interface cursor-theme macOS
+gsettings set org.gnome.desktop.interface cursor-theme Bibata-Original-Classic
 ```
 
 Log out and pick **Hyprland** at the login screen.
