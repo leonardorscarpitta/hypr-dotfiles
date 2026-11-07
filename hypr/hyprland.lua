@@ -20,7 +20,7 @@ local menu        = "rofi -show drun"
 local scripts     = "~/.config/hypr/scripts/"
 
 hl.on("hyprland.start", function()
-    hl.exec_cmd("hyprctl setcursor Bibata-Original-Classic 24")
+    hl.exec_cmd("hyprctl setcursor Bibata-Rounded 24")
     hl.exec_cmd("waybar")
     hl.exec_cmd("hyprpaper")
     hl.exec_cmd("hypridle")
@@ -32,7 +32,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("wl-paste --type image --watch cliphist store")
 end)
 
-hl.env("XCURSOR_THEME", "Bibata-Original-Classic")
+hl.env("XCURSOR_THEME", "Bibata-Rounded")
 hl.env("XCURSOR_SIZE", "24")
 hl.env("XDG_DATA_DIRS", os.getenv("HOME") .. "/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share")
 hl.env("HYPRCURSOR_SIZE", "24")
