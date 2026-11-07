@@ -5,22 +5,22 @@ vim.o.termguicolors = true
 vim.g.colors_name = "kintsugi"
 
 local c = {
-  mantle   = "#0f0e12",
-  ink      = "#141318",
-  surface  = "#1e1c23",
-  surface2 = "#2a2731",
-  overlay  = "#46414f",
-  muted    = "#8b8496",
-  subtext  = "#c9c1b3",
-  text     = "#e9e2d4",
-  gold     = "#d6aa5c",
-  gold2    = "#f1d08f",
-  clay     = "#cf6a52",
-  clay2    = "#e08670",
-  sage     = "#93b088",
-  teal     = "#73a7a3",
-  blue     = "#84a0cc",
-  plum     = "#a98bbf",
+  mantle   = "#0e0e13",
+  ink      = "#131318",
+  surface  = "#1f1e25",
+  surface2 = "#312f4f",
+  overlay  = "#46454f",
+  muted    = "#86838d",
+  subtext  = "#c8c5d0",
+  text     = "#e5e1e9",
+  gold     = "#c4c0ff",
+  gold2    = "#e2dfff",
+  clay     = "#ffb4ab",
+  clay2    = "#ffcfc9",
+  sage     = "#7aba7d",
+  teal     = "#49c1d3",
+  blue     = "#9fb2f5",
+  plum     = "#d0b4f0",
   none     = "NONE",
 }
 
@@ -283,5 +283,5 @@ for group, spec in pairs(hl) do
 end
 
 local term = { c.surface2, c.clay, c.sage, c.gold, c.blue, c.plum, c.teal, c.subtext,
-               c.overlay, c.clay2, "#adc8a2", c.gold2, "#a2bae0", "#c3a8d6", "#94c2be", c.text }
+               c.overlay, c.clay2, "#9fd4a1", c.gold2, "#bccaff", "#e2cdfa", "#7fd6e3", c.text }
 for i, col in ipairs(term) do vim.g["terminal_color_" .. (i - 1)] = col end

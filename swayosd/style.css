@@ -1,9 +1,9 @@
-@define-color ink     #141318;
-@define-color surface #2a2731;
-@define-color muted   #8b8496;
-@define-color text    #e9e2d4;
-@define-color gold    #d6aa5c;
-@define-color gold2   #f1d08f;
+@define-color ink     #131318;
+@define-color surface #312f4f;
+@define-color muted   #86838d;
+@define-color text    #e5e1e9;
+@define-color gold    #c4c0ff;
+@define-color gold2   #e2dfff;
 
 window#osd {
     border-radius: 16px;

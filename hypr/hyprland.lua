@@ -1,13 +1,13 @@
 local c = {
-    ink     = "141318",
-    mantle  = "0f0e12",
-    surface = "1e1c23",
-    overlay = "46414f",
-    text    = "e9e2d4",
-    gold    = "d6aa5c",
-    gold2   = "f1d08f",
-    clay    = "cf6a52",
-    teal    = "73a7a3",
+    ink     = "131318",
+    mantle  = "0e0e13",
+    surface = "1f1e25",
+    overlay = "46454f",
+    text    = "e5e1e9",
+    gold    = "c4c0ff",
+    gold2   = "e2dfff",
+    clay    = "ffb4ab",
+    teal    = "49c1d3",
 }
 
 hl.monitor({ output = "DP-1", mode = "2560x1080@99.94", position = "0x0", scale = 1, supports_wide_color = -1, supports_hdr = -1 })
@@ -88,7 +88,7 @@ hl.config({
     misc = {
         force_default_wallpaper = 0,
         disable_hyprland_logo   = true,
-        background_color        = 0xff0f0e12,
+        background_color        = 0xff0e0e13,
     },
 
     input = {
