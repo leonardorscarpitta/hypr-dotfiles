@@ -34,7 +34,7 @@ inputbar {
     expand:       false;
 }
 entry {
-    font:              "Inter 13";
+    font:              "Iosevka Nerd Font 14";
     placeholder:       "Search for anything…";
     placeholder-color: @muted;
     cursor:            text;
@@ -47,7 +47,7 @@ section {
 }
 prompt {
     padding:    12px 20px 4px 20px;
-    font:       "Inter SemiBold 9.5";
+    font:       "Iosevka Nerd Font SemiBold 10.5";
     text-color: @muted;
     expand:     false;
 }

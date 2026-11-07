@@ -6,7 +6,7 @@ configuration {
     display-run: "Commands";
     display-window: "Windows";
     drun-display-format: "{name}[  <span foreground='#8b8496'>{generic}</span>]";
-    font: "Inter 11";
+    font: "Iosevka Nerd Font 12";
 }
 
 @theme "kintsugi"
