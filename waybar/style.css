@@ -11,7 +11,7 @@
 @define-color teal     #49c1d3;
 
 * {
-    font-family: "Intel One Mono", "JetBrainsMono Nerd Font";
+    font-family: "Intel One Mono";
     font-size: 13.5px;
     font-weight: 700;
     min-height: 0;
@@ -19,9 +19,7 @@
 }
 
 window#waybar {
-    background: alpha(@ink, 0.86);
-    border: 1px solid alpha(@overlay, 0.45);
-    border-radius: 10px;
+    background: transparent;
     color: @text;
 }
 
@@ -32,55 +30,83 @@ tooltip {
 }
 tooltip label { color: @text; }
 
-#custom-logo, #workspaces, #window, #clock, #mpris, #network,
-#tray, #pulseaudio, #custom-nightlight, #resources, #custom-power {
-    padding: 0 8px;
-    background: transparent;
+#custom-logo, #workspaces, #window, #clock, #tray, #pulseaudio,
+#resources, #net, #custom-nightlight, #custom-power, #custom-eq, #mpris {
+    background: alpha(@ink, 0.86);
+    border: 1px solid alpha(@overlay, 0.45);
+    border-radius: 999px;
+    padding: 0 12px;
+    margin: 2px 0;
 }
 
 #custom-logo {
     color: @gold2;
     font-size: 16px;
-    padding: 0 6px 0 12px;
+    padding: 0 13px 0 12px;
 }
 
-#workspaces { padding: 0 2px; }
+#workspaces { padding: 0 6px; }
 #workspaces button {
-    color: @overlay;
-    padding: 0 7px;
-    margin: 6px 1px;
-    border-radius: 6px;
-    transition: all 0.2s ease;
+    min-width: 10px;
+    min-height: 10px;
+    padding: 0;
+    margin: 11px 3px;
+    font-size: 1px;
+    box-shadow: none;
+    outline: none;
+    border-radius: 999px;
+    background: alpha(@overlay, 0.5);
+    transition: all 0.25s ease;
 }
-#workspaces button:not(.empty) { color: @muted; }
+#workspaces button label {
+    font-size: 1px;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+}
+#workspaces button:not(.empty) { background: @muted; }
 #workspaces button.active {
-    color: @gold2;
-    background: @surface2;
+    min-width: 28px;
+    background: @gold;
 }
-#workspaces button.urgent { color: @clay; }
-#workspaces button:hover {
-    color: @gold2;
-    background: alpha(@surface2, 0.6);
-}
+#workspaces button.urgent { background: @clay; }
+#workspaces button:hover { background: @gold2; }
 
 #window { color: @muted; }
 #window image { margin-right: 6px; }
-window#waybar.empty #window { padding: 0; }
+window#waybar.empty #window {
+    background: transparent;
+    border-color: transparent;
+    padding: 0;
+}
 
-#clock { color: @text; }
-
-#mpris { color: @text; }
+#custom-eq {
+    color: @gold;
+    border-right: none;
+    border-radius: 999px 0 0 999px;
+    padding: 0 6px 0 14px;
+    margin-right: -6px;
+}
+#custom-eq.paused { color: @muted; }
+#mpris {
+    color: @text;
+    border-left: none;
+    border-radius: 0 999px 999px 0;
+    padding: 0 14px 0 6px;
+}
 #mpris.paused { color: @muted; }
 
-#network { color: @text; }
-#network.disconnected { color: @muted; }
-#network.vpn { padding: 0 6px; }
+#clock { color: @text; padding: 0 14px; }
 
-#tray { padding: 0 6px; }
+#tray { padding: 0 10px; }
 #tray > .needs-attention { background: alpha(@clay, 0.3); border-radius: 6px; }
 
 #pulseaudio { color: @text; }
 #pulseaudio.muted { color: @muted; }
+
+#net { padding: 0 6px; }
+#network { color: @text; padding: 0 6px; }
+#network.disconnected { color: @muted; }
 
 #custom-nightlight { color: @muted; font-size: 15px; }
 #custom-nightlight.on { color: @gold2; }
@@ -88,11 +114,11 @@ window#waybar.empty #window { padding: 0; }
 #custom-power {
     color: @clay;
     font-size: 15px;
-    padding: 0 14px 0 8px;
+    padding: 0 14px 0 12px;
 }
 #custom-power:hover { color: @gold2; }
 
-#resources { padding: 0 8px 0 4px; }
+#resources { padding: 0 6px; }
 #cpu, #memory, #custom-gpu { padding: 0 6px; }
 #cpu.warning, #memory.warning, #custom-gpu.warning    { color: @gold; }
 #cpu.critical, #memory.critical, #custom-gpu.critical { color: @clay; }
