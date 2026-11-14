@@ -31,7 +31,7 @@ tooltip {
 tooltip label { color: @text; }
 
 #custom-logo, #workspaces, #window, #clock, #tray, #pulseaudio,
-#resources, #net, #custom-nightlight, #custom-power, #custom-eq, #mpris {
+#resources, #net, #custom-nightlight, #custom-power, #media {
     background: alpha(@ink, 0.86);
     border: 1px solid alpha(@overlay, 0.45);
     border-radius: 999px;
@@ -80,21 +80,15 @@ window#waybar.empty #window {
     padding: 0;
 }
 
-#custom-eq {
-    color: @gold;
-    border-right: none;
-    border-radius: 999px 0 0 999px;
-    padding: 0 6px 0 14px;
-    margin-right: -6px;
-}
-#custom-eq.paused { color: @muted; }
-#mpris {
-    color: @text;
-    border-left: none;
-    border-radius: 0 999px 999px 0;
-    padding: 0 14px 0 6px;
-}
+#media { padding: 0 10px 0 14px; }
+#mpris { color: @text; padding: 0 8px 0 0; }
 #mpris.paused { color: @muted; }
+#custom-prev, #custom-playpause, #custom-next {
+    color: @muted;
+    padding: 0 5px;
+}
+#custom-playpause { color: @gold; font-size: 15px; }
+#custom-prev:hover, #custom-playpause:hover, #custom-next:hover { color: @gold2; }
 
 #clock { color: @text; padding: 0 14px; }
 

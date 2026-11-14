@@ -8,15 +8,30 @@
     "spacing": 6,
 
     "modules-left":   ["custom/logo", "hyprland/workspaces", "hyprland/window"],
-    "modules-center": ["custom/eq", "mpris", "clock"],
+    "modules-center": ["group/media", "clock"],
     "modules-right":  ["tray", "pulseaudio", "group/resources", "group/net", "custom/nightlight", "custom/power"],
 
-    "custom/eq": {
-        "exec": "~/.config/waybar/scripts/eq.sh",
-        "return-type": "json",
-        "restart-interval": 5,
-        "tooltip": false,
+    "group/media": {
+        "orientation": "horizontal",
+        "modules": ["mpris", "custom/prev", "custom/playpause", "custom/next"]
+    },
+
+    "custom/prev": {
+        "format": "󰒮",
+        "tooltip-format": "Previous",
+        "on-click": "playerctl previous"
+    },
+
+    "custom/playpause": {
+        "format": "󰐎",
+        "tooltip-format": "Play / pause",
         "on-click": "playerctl play-pause"
+    },
+
+    "custom/next": {
+        "format": "󰒭",
+        "tooltip-format": "Next",
+        "on-click": "playerctl next"
     },
 
     "group/net": {
@@ -62,8 +77,8 @@
 
     "mpris": {
 
-        "format":        "{title} <span color='#86838d'>•</span> <span color='#86838d'>{artist}</span>  <span color='#e2dfff'>{status_icon}</span>",
-        "format-paused": "<span color='#86838d'>{title}</span> <span color='#46454f'>•</span> <span color='#46454f'>{artist}</span>  <span color='#86838d'>{status_icon}</span>",
+        "format":        "<span color='#c4c0ff'>{player_icon}</span>  {title} <span color='#86838d'>•</span> <span color='#86838d'>{artist}</span>",
+        "format-paused": "<span color='#86838d'>{player_icon}</span>  <span color='#86838d'>{title}</span> <span color='#46454f'>•</span> <span color='#46454f'>{artist}</span>",
         "format-stopped": "",
         "player-icons": {
             "default":  "󰎇",
