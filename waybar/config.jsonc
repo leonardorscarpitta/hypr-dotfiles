@@ -23,7 +23,7 @@
     },
 
     "custom/playpause": {
-        "format": "󰐎",
+        "format": "󰏤",
         "tooltip-format": "Play / pause",
         "on-click": "playerctl play-pause"
     },
